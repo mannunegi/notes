@@ -1,0 +1,65 @@
+
+collectins
+
+Boxing=the process of converting primitive(int,char) data type into object is called boxing.and it is implicit typecasting.
+UnBoxing=the process of converting a object into primitive data type is known as unboxing.it is a explicit typecasting.
+
+*****************************************************************************************************************************
+Generic------>
+ 
+1-generic can be used with class,function,interface and delegate
+2-with the help of generics we can use a class, method in multiple ways.
+
+class Person<T>
+{
+   public void Post(T temp)
+    {
+      Console.WriteLine(temp);
+     }
+    
+    public void Salary(T temp)
+    {
+      Console.WriteLine(temp);
+     }
+
+}
+
+class Designation
+{
+    public static void Main(string[]args)
+     {
+      Person<string>p=new Person<string>();
+      p.Post("Hr");
+      
+      Person<int>p1=new Person<int>();
+       p1.Salary(50000);
+      }
+}
+
+A generic methd and generic class can be used in multiple ways .basically we just define the structure
+of the class then use that class as per our requirment .like if we want the to store string type data 
+the we can make that class fo type string at run time and can store string data type values.same for 
+other data type also like int char etc;
+
+from the above example we can see that the person class is generic type we can use that class in main 
+function as per our requirements.
+
+generic can declare with the help of angular bracket<>.
+eg-class Person<String>
+
+************************************************************
+//generic method example
+class Home
+{
+   public void Mother<T>(T temp)
+   {
+     Console.WriteLine(temp);
+   } 
+}
+
+class child{
+
+   Home obj=new Home();
+   obj.Mother<int>(2);
+   obj.Mother<string>("maggi");
+}
